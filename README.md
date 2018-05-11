@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# screenshots
+
+Getting post
+<img src="screenshots/1.png" >
+Creating Post
+<img src="screenshots/2.png" >
+Delete Post
+<img src="screenshots/3.png" >
+Update Post
+<img src="screenshots/4.png" >
+Error Handling
+<img src="screenshots/5.png" >
+

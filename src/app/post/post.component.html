@@ -1,0 +1,45 @@
+<!-- <li class="list-group">
+  <ul 
+    *ngFor="let post of posts"
+    class="list-group-item">
+    {{post.title}}
+  </ul>
+</li> -->
+<div>
+  <input type="text" class="form-control"
+  (keyup.enter)="createPost(title)" #title
+  >
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Post Id</th>
+      <th>User Id</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{post.id}}</td>
+      <td>{{post.userId}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.body | uppercase}}</td>
+      <td>
+          <button class="btn btn-primary btn-sm"
+            (click)="updatePost(post)" >
+            update
+          </button>
+         </td>
+         <td>
+          <button class="btn btn-danger btn-sm"
+            (click)="deletePost(post)" >
+            Delete
+          </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

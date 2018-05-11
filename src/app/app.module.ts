@@ -1,18 +1,32 @@
+import {HttpModule} from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, ErrorHandler } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { PostComponent } from './post/post.component';
+import { PostService } from './post/post.service';
+import { AppErrorHandler } from './common/app-error-hanlder';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule
+
+
   ],
-  providers: [],
+  providers: [PostService,{
+    provide : ErrorHandler,
+    useClass : AppErrorHandler
+  }],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
